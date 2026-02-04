@@ -44,6 +44,11 @@ By shaping the input, we indirectly shape the output.
 ## Core Components – Prompt Engineering
 
 ### 1. Role Prompting
+
+<div align="center"> 
+  <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/role.png?ref_type=heads" width="80%" />
+</div>
+
 Define a clear role or persona for the model to shape tone, expertise, and reasoning style.
 
 **Example:**
@@ -59,6 +64,11 @@ Define a clear role or persona for the model to shape tone, expertise, and reaso
 ---
 
 ### 2. Zero-Shot Prompting
+
+<div align="center"> 
+  <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/zero-shot.png?ref_type=heads" width="80%" />
+</div>
+
 Ask a task or question **without providing examples**.
 
 **Example:**
@@ -75,6 +85,11 @@ Ask a task or question **without providing examples**.
 ---
 
 ### 3. One-Shot / Few-Shot Prompting
+
+<div align="center"> 
+  <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/one-shot.png?ref_type=heads" width="80%" />
+</div>
+
 Provide one or more examples to guide the model’s behavior.
 
 **Example:**
@@ -98,6 +113,11 @@ Output:
 ---
 
 ### 4. Chain of Thought (CoT)
+
+<div align="center"> 
+  <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/CoT.png?ref_type=heads" width="80%" />
+</div>
+
 Encourage the model to reason step by step before producing the final answer.
 
 **Instructional Example:**
@@ -128,6 +148,7 @@ Split the word “strawberries” into individual characters and count how many 
 ---
 
 ### 5. Tree of Thought (ToT)
+
 Explore multiple reasoning paths and compare outcomes before selecting the best one.
 
 **Example:**
