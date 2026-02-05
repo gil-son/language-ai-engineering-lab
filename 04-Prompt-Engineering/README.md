@@ -149,6 +149,10 @@ Split the word “strawberries” into individual characters and count how many 
 
 ### 5. Tree of Thought (ToT)
 
+<div align="center"> 
+  <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/ToT.png?ref_type=heads" width="80%" />
+</div>
+
 Explore multiple reasoning paths and compare outcomes before selecting the best one.
 
 **Example:**
@@ -165,6 +169,11 @@ Explore multiple reasoning paths and compare outcomes before selecting the best 
 ---
 
 ### 6. Batch Prompting
+
+<div align="center"> 
+  <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/batch.png?ref_type=heads" width="80%" />
+</div>
+
 Send multiple prompts in a single request.
 
 **Example:**
@@ -181,6 +190,11 @@ Send multiple prompts in a single request.
 ---
 
 ### 7. Prompt Enrichment
+
+<div align="center"> 
+  <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/enrichment.png?ref_type=heads" width="80%" />
+</div>
+
 Use a preprocessing LLM to improve user prompts.
 
 **Examples:**
@@ -198,6 +212,11 @@ Use a preprocessing LLM to improve user prompts.
 ---
 
 ### 8. Skeleton of Thought (SoT)
+
+<div align="center"> 
+  <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/Skeleton.png?ref_type=heads" width="80%" />
+</div>
+
 Ask the model to generate an outline before producing the full answer.
 
 **Example:**
@@ -213,6 +232,11 @@ Ask the model to generate an outline before producing the full answer.
 ---
 
 ### 9. ReAct Framework
+
+<div align="center"> 
+  <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/ReAct.png?ref_type=heads" width="80%" />
+</div>
+
 Combine **Reasoning + Acting**.
 
 - The model reasons
@@ -231,6 +255,11 @@ Combine **Reasoning + Acting**.
 ---
 
 ### 10. Prompt Chaining
+
+<div align="center"> 
+  <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/chaning.png?ref_type=heads" width="80%" />
+</div>
+
 Break complex tasks into sequential prompts.
 
 **Pros:**
@@ -244,6 +273,11 @@ Break complex tasks into sequential prompts.
 ---
 
 ### 11. Least-to-Most Decomposition
+
+<div align="center"> 
+  <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/least-to-most.png?ref_type=heads" width="80%" />
+</div>
+
 Solve problems by starting with simple subtasks and gradually increasing complexity.
 
 **Pros:**
@@ -256,6 +290,11 @@ Solve problems by starting with simple subtasks and gradually increasing complex
 ---
 
 ### 12. Professional Prompt Structure
+
+<div align="center"> 
+  <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/professional-prompt.png?ref_type=heads" width="80%" />
+</div>
+
 A high-quality prompt usually includes:
 - Role
 - Task
@@ -274,6 +313,11 @@ A high-quality prompt usually includes:
 ---
 
 ### 13. Prompt Storage and Versioning
+
+<div align="center"> 
+  <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/prompt-storage-and-versioning.png?ref_type=heads" width="80%" />
+</div>
+
 Treat prompts as code.
 
 **Pros:**
@@ -286,6 +330,11 @@ Treat prompts as code.
 ---
 
 ### 14. Prompt Management Tools
+
+<div align="center"> 
+  <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/prompt-management-tools.png?ref_type=heads" width="80%" />
+</div>
+
 Tools like LangSmith or LangChain provide tracing, evaluation, and versioning.
 
 **Pros:**
@@ -298,6 +347,11 @@ Tools like LangSmith or LangChain provide tracing, evaluation, and versioning.
 ---
 
 ### 15. Testing and Prompt Evaluation
+
+<div align="center"> 
+  <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/testing-and-prompt-evaluation.png?ref_type=heads" width="80%" />
+</div>
+
 - Automated tests
 - Regression tests
 - A/B testing
@@ -313,6 +367,11 @@ Tools like LangSmith or LangChain provide tracing, evaluation, and versioning.
 ---
 
 ### 16. Design Documentation
+
+<div align="center"> 
+  <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/design-documentation.png?ref_type=heads" width="80%" />
+</div>
+
 Document goals, assumptions, and failure cases.
 
 **Pros:**
@@ -325,6 +384,11 @@ Document goals, assumptions, and failure cases.
 ---
 
 ### 17. Repositories and References
+
+<div align="center"> 
+  <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/repositories-and-references.png?ref_type=heads" width="80%" />
+</div>
+
 - Prompt pattern libraries
 - Open-source examples
 - Experiment notebooks
