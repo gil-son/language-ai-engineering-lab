@@ -414,6 +414,12 @@ Document goals, assumptions, and failure cases.
 
 ---
 
+### <img src="https://cdn-icons-png.flaticon.com/512/2147/2147809.png" width="80"> Code/Notebook/Projects
+
+- [Types of Prompts using LangChain](https://github.com/gil-son/language-ai-engineering-lab/tree/main/projects/11-LLM-Orchestration/langchain/ollama/6_types_of_prompts)
+
+---
+
 ### <img src="https://cdn-icons-png.flaticon.com/512/2112/2112889.png" width="80"> Videos
 
 A few recommended resources to visualize:
