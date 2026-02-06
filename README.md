@@ -7,7 +7,10 @@
 
 Welcome to the **Language AI Engineering Lab** — a comprehensive, structured repository designed to guide you from **human language fundamentals and NLP** through **Transformers, Large Language Models**, and into **production-ready Language AI systems**.
 
-Whether you are starting from the basics or aiming to build **scalable, real-world AI applications**, this lab offers **hands-on learning paths**, **practical implementations**, and **end-to-end projects** that cover the **entire Language AI engineering lifecycle** — from text processing and model architectures to retrieval, agents, orchestration, evaluation, and deployment.
+Whether you are starting from the basics or aiming to build **scalable, real-world Ganerative AI applications**, this lab offers **hands-on learning paths**, **practical implementations**, and **end-to-end projects** that cover the **entire Language AI engineering lifecycle** — from text processing and model architectures to retrieval, agents, orchestration, evaluation, and deployment.
+
+**Important:** This repository focuses on **Generative AI**. If you are looking to learn **Machine Learning**, you can find it in this [Machine Learning repository](https://github.com/gil-son/machine-learning).
+
 
 ---
 
