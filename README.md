@@ -9,8 +9,21 @@ Welcome to the **Language AI Engineering Lab** — a comprehensive, structured r
 
 Whether you are starting from the basics or aiming to build **scalable, real-world Ganerative AI applications**, this lab offers **hands-on learning paths**, **practical implementations**, and **end-to-end projects** that cover the **entire Language AI engineering lifecycle** — from text processing and model architectures to retrieval, agents, orchestration, evaluation, and deployment.
 
-**Important:** This repository focuses on **Generative AI**. If you are looking to learn **Machine Learning**, you can find it in this [Machine Learning repository](https://github.com/gil-son/machine-learning).
+## <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/ai-ways.png?ref_type=heads" width="80"/> What is Generative AI?
 
+Generative AI is a class of artificial intelligence systems designed to **create new content**—such as text, images, code, audio, or video—based on patterns learned from data.
+
+It is **not the same as traditional Machine Learning**, which typically focuses on **prediction or classification** tasks (e.g., forecasting values or assigning labels).
+
+Generative AI models learn the **underlying structure of data** and use it to generate **novel, coherent outputs**, often in a flexible and interactive way.
+ 
+<div align="center"> 
+  <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/types-of-ai.png?ref_type=heads" width="80%" />
+</div>
+
+In this repository, you will explore **in-depth concepts of Generative AI**, including **diagrams, illustrations, code and notebook examples, references, and curated videos** to support and accelerate your learning.
+
+**Important:** This repository focuses on **Generative AI**. If you are looking to learn **Machine Learning**, you can find it in this [Machine Learning repository](https://github.com/gil-son/machine-learning).
 
 ---
 
