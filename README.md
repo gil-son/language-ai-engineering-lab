@@ -18,7 +18,7 @@ It is **not the same as traditional Machine Learning**, which typically focuses 
 Generative AI models learn the **underlying structure of data** and use it to generate **novel, coherent outputs**, often in a flexible and interactive way.
  
 <div align="center"> 
-  <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/types-of-ai.png?ref_type=heads" width="80%" />
+  <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/types-of-ai.png?ref_type=heads" width="100%" />
 </div>
 
 In this repository, you will explore **in-depth concepts of Generative AI**, including **diagrams, illustrations, code and notebook examples, references, and curated videos** to support and accelerate your learning.
