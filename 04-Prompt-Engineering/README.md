@@ -400,6 +400,65 @@ Document goals, assumptions, and failure cases.
 **Cons:**
 - Requires curation
 
+---
+
+## <img src="https://cdn-icons-png.flaticon.com/512/2351/2351495.png" width="60"/> System vs User Prompt
+
+In modern LLM-based systems, prompts are typically divided into **examples/roles** that control how the model interprets instructions and context.
+
+Understanding this separation is fundamental for building reliable AI applications.
+    
+### <img src="https://cdn-icons-png.flaticon.com/512/5825/5825928.png" width="60"/> System Prompt
+
+**System = Global configuration for a conversation**
+
+The System Prompt defines the model’s overall behavior, tone, rules, and constraints.  
+It acts as a persistent instruction layer that guides the assistant throughout the entire interaction.
+
+Examples:
+- Define personality (e.g., “You are a strict technical reviewer.”)
+- Set response format (e.g., “Always answer in JSON.”)
+- Enforce safety rules
+- Control verbosity level
+
+Think of it as the **operating system of the conversation**.
+
+---
+
+### <img src="https://cdn-icons-png.flaticon.com/512/9482/9482459.png" width="60"/> User Prompt
+
+**User = A specific wish with 0 or more instructions**
+
+The User Prompt represents the actual task or request being made.
+
+It may contain:
+- A direct question
+- Task-specific instructions
+- Contextual information
+- Constraints or formatting requirements
+
+Examples:
+- “Explain gradient descent in simple terms.”
+- “Summarize this text in 3 bullet points.”
+- “Generate a Python function that sorts a list.”
+
+Think of it as the **current task being executed inside the global configuration**.
+
+---
+
+## <img src="https://cdn-icons-png.flaticon.com/512/3345/3345293.png" width="60"/> Golden Rules
+
+Before running a prompt, review whether it:
+
+- Defines one or more prompts strategies/components and scope  
+- Has a direct objective
+- Provides separated and minimal inputs
+- Defines the output format
+- Lists clear criteria
+- Handles ambiguity and errors
+- Includes necessary restrictions
+
+---
 
 ## <img src="https://cdn-icons-png.flaticon.com/512/6404/6404564.png" width="60"/> Use Cases
 
