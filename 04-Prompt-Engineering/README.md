@@ -10,7 +10,6 @@ Prompt Engineering is the practice of designing, structuring, and optimizing pro
 
 Rather than relying solely on model fine-tuning, prompt engineering leverages instruction design, examples, and reasoning strategies to control model behavior at inference time.
 
-
 ---
 
 ## <img src="https://cdn-icons-png.flaticon.com/512/5557/5557844.png" width="60"/> Why use it?
@@ -41,9 +40,12 @@ By shaping the input, we indirectly shape the output.
 
 ---
 
-## Core Components – Prompt Engineering
+## 1. Core Prompting Techniques
 
-### 1. Role Prompting
+These directly affect how the model reasons or responds.
+> These are the foundation layer.
+
+### Role Prompting
 
 <div align="center"> 
   <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/role.png?ref_type=heads" width="80%" />
@@ -63,7 +65,7 @@ Define a clear role or persona for the model to shape tone, expertise, and reaso
 
 ---
 
-### 2. Zero-Shot Prompting
+### Zero-Shot Prompting
 
 <div align="center"> 
   <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/zero-shot.png?ref_type=heads" width="80%" />
@@ -84,7 +86,7 @@ Ask a task or question **without providing examples**.
 
 ---
 
-### 3. One-Shot / Few-Shot Prompting
+### One-Shot / Few-Shot Prompting
 
 <div align="center"> 
   <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/one-shot.png?ref_type=heads" width="80%" />
@@ -112,7 +114,7 @@ Output:
 
 ---
 
-### 4. Chain of Thought (CoT)
+### Chain of Thought (CoT)
 
 <div align="center"> 
   <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/CoT.png?ref_type=heads" width="80%" />
@@ -145,9 +147,30 @@ Split the word “strawberries” into individual characters and count how many 
 **Cons:**
 - Higher latency and token usage
 
+
+### Least-to-Most Decomposition
+
+<div align="center"> 
+  <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/least-to-most.png?ref_type=heads" width="80%" />
+</div>
+
+Solve problems by starting with simple subtasks and gradually increasing complexity.
+
+**Pros:**
+- Reduces cognitive load
+- Improves complex reasoning
+
+**Cons:**
+- Requires task decomposition logic
+
 ---
 
-### 5. Tree of Thought (ToT)
+## 2. Advanced Reasoning Strategies
+
+These go beyond simple prompting and introduce structured workflows.
+> These are execution patterns
+
+### Tree of Thought (ToT)
 
 <div align="center"> 
   <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/ToT.png?ref_type=heads" width="80%" />
@@ -168,70 +191,7 @@ Explore multiple reasoning paths and compare outcomes before selecting the best 
 
 ---
 
-### 6. Batch Prompting
-
-<div align="center"> 
-  <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/batch.png?ref_type=heads" width="80%" />
-</div>
-
-Send multiple prompts in a single request.
-
-**Example:**
-- Classifying thousands of customer feedback messages
-
-**Pros:**
-- Higher throughput
-- Lower cost per request
-
-**Cons:**
-- Harder error isolation
-- Less flexibility per prompt
-
----
-
-### 7. Prompt Enrichment
-
-<div align="center"> 
-  <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/enrichment.png?ref_type=heads" width="80%" />
-</div>
-
-Use a preprocessing LLM to improve user prompts.
-
-**Examples:**
-- Clarifying vague user input
-- Adding missing context
-
-**Pros:**
-- Better downstream responses
-- Improved user experience
-
-**Cons:**
-- Additional latency
-- Extra model cost
-
----
-
-### 8. Skeleton of Thought (SoT)
-
-<div align="center"> 
-  <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/Skeleton.png?ref_type=heads" width="80%" />
-</div>
-
-Ask the model to generate an outline before producing the full answer.
-
-**Example:**
-> First generate a bullet-point outline, then expand each point.
-
-**Pros:**
-- Better structure
-- More coherent long-form outputs
-
-**Cons:**
-- Two-step generation increases latency
-
----
-
-### 9. ReAct Framework
+### ReAct (Reason + Act)
 
 <div align="center"> 
   <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/ReAct.png?ref_type=heads" width="80%" />
@@ -254,7 +214,7 @@ Combine **Reasoning + Acting**.
 
 ---
 
-### 10. Prompt Chaining
+### Prompt Chaining
 
 <div align="center"> 
   <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/chaning.png?ref_type=heads" width="80%" />
@@ -272,24 +232,71 @@ Break complex tasks into sequential prompts.
 
 ---
 
-### 11. Least-to-Most Decomposition
+### Batch Prompting
 
 <div align="center"> 
-  <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/least-to-most.png?ref_type=heads" width="80%" />
+  <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/batch.png?ref_type=heads" width="80%" />
 </div>
 
-Solve problems by starting with simple subtasks and gradually increasing complexity.
+Send multiple prompts in a single request.
+
+**Example:**
+- Classifying thousands of customer feedback messages
 
 **Pros:**
-- Reduces cognitive load
-- Improves complex reasoning
+- Higher throughput
+- Lower cost per request
 
 **Cons:**
-- Requires task decomposition logic
+- Harder error isolation
+- Less flexibility per prompt
+
+## 3. Prompt Design & Structuring
+
+Reusable structures and patterns applied in real systems.
+> Think of this as prompt architecture / composition layer.
+
+### Prompt Enrichment
+
+<div align="center"> 
+  <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/enrichment.png?ref_type=heads" width="80%" />
+</div>
+
+Use a preprocessing LLM to improve user prompts.
+
+**Examples:**
+- Clarifying vague user input
+- Adding missing context
+
+**Pros:**
+- Better downstream responses
+- Improved user experience
+
+**Cons:**
+- Additional latency
+- Extra model cost
 
 ---
 
-### 12. Professional Prompt Structure
+### Skeleton of Thought (SoT)
+
+<div align="center"> 
+  <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/Skeleton.png?ref_type=heads" width="80%" />
+</div>
+
+Ask the model to generate an outline before producing the full answer.
+
+**Example:**
+> First generate a bullet-point outline, then expand each point.
+
+**Pros:**
+- Better structure
+- More coherent long-form outputs
+
+**Cons:**
+- Two-step generation increases latency
+
+### Professional Prompt Structure
 
 <div align="center"> 
   <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/professional-prompt.png?ref_type=heads" width="80%" />
@@ -312,41 +319,12 @@ A high-quality prompt usually includes:
 
 ---
 
-### 13. Prompt Storage and Versioning
+## 4. Evaluation & Optimization
 
-<div align="center"> 
-  <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/prompt-storage-and-versioning.png?ref_type=heads" width="80%" />
-</div>
+How you validate and improve prompts.
+> This is critical for production-grade systems.
 
-Treat prompts as code.
-
-**Pros:**
-- Reproducibility
-- Easy rollback
-
-**Cons:**
-- Requires governance
-
----
-
-### 14. Prompt Management Tools
-
-<div align="center"> 
-  <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/prompt-management-tools.png?ref_type=heads" width="80%" />
-</div>
-
-Tools like LangSmith or LangChain provide tracing, evaluation, and versioning.
-
-**Pros:**
-- Observability
-- Faster iteration
-
-**Cons:**
-- Tooling dependency
-
----
-
-### 15. Testing and Prompt Evaluation
+### Testing and Prompt Evaluation
 
 <div align="center"> 
   <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/testing-and-prompt-evaluation.png?ref_type=heads" width="80%" />
@@ -366,7 +344,51 @@ Tools like LangSmith or LangChain provide tracing, evaluation, and versioning.
 
 ---
 
-### 16. Design Documentation
+## 5. Prompt Engineering Operations (PromptOps)
+
+This is where many engineers differentiate themselves.
+> Similar to MLOps, but for prompts.
+
+### Prompt Storage and Versioning
+
+<div align="center"> 
+  <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/prompt-storage-and-versioning.png?ref_type=heads" width="80%" />
+</div>
+
+Treat prompts as code.
+
+**Pros:**
+- Reproducibility
+- Easy rollback
+
+**Cons:**
+- Requires governance
+
+---
+
+### Prompt Management Tools
+
+<div align="center"> 
+  <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/prompt-management-tools.png?ref_type=heads" width="80%" />
+</div>
+
+Tools like LangSmith or LangChain provide tracing, evaluation, and versioning.
+
+**Pros:**
+- Observability
+- Faster iteration
+
+**Cons:**
+- Tooling dependency
+
+---
+
+## 6. Documentation & Knowledge Management
+
+Supporting materials and learning assets.
+> This shows maturity and scalability.
+
+### Design Documentation
 
 <div align="center"> 
   <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/design-documentation.png?ref_type=heads" width="80%" />
@@ -383,7 +405,7 @@ Document goals, assumptions, and failure cases.
 
 ---
 
-### 17. Repositories and References
+### Repositories, References and Knowledge Base
 
 <div align="center"> 
   <img src="https://gitlab.com/gil-son/useful-images-collection/-/raw/main/png/repositories-and-references.png?ref_type=heads" width="80%" />
