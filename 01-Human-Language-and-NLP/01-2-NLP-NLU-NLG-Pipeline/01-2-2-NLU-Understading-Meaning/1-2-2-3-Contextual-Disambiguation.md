@@ -29,6 +29,52 @@ Example:
 
 Only context (e.g., “to deposit money” vs. “to relax near the water”) reveals the correct meaning.
 
+
+### Types of Ambiguity in Language
+
+Understanding contextual disambiguation requires recognizing different types of ambiguity:
+
+#### 1. Lexical Ambiguity (Word-level)
+
+Words with multiple meanings:
+
+- **Same spelling** → bat, bank, can, present  
+- **Same sound** → buy, by, bye | oar, or, ore  
+- **Proper nouns** → Jack vs jack | Mark vs mark  
+
+---
+
+#### 2. Semantic Scope Ambiguity (Sentence-level)
+
+Sentences with multiple interpretations:
+
+- **Subject** → “I can see the man with glasses.”  
+- **Plurality** → “They only ate the pizza.”  
+- **Preposition** → “There’s a dog with a frog on a log.”  
+
+---
+
+#### 3. Contextual Ambiguity (Pragmatic)
+
+Meaning depends on real-world or conversational context:
+
+- **Sarcasm** → “Yay, I get to wait in line.”  
+- **Hyperbole** → “This is taking forever.”  
+- **Metaphors** → “This place is a zoo.”  
+- **Implied meaning** → “Sit tight”, “Go with the flow”  
+- **Cultural nuances** → “Y’all”, dialect expressions  
+
+---
+
+#### 4. Evolving Language Ambiguity
+
+Language changes over time:
+
+- **Slang** → cool, groovy, fly, gnarly, phat, fire  
+- **Internet slang** → lol, lmao, imo, jk, irl, dm  
+- **Emojis** → 🙂 😬 🤔  
+- **Technology influence** → “cell phone” (device vs communication context)  
+
 ---
 
 ### <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/5557/5557844.png" width="80"/> Why use it?
