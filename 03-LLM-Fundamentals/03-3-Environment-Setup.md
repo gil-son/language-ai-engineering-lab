@@ -73,13 +73,13 @@ cd llm-engineering-lab
 ```
 2. Access the desired notebook or project:
 ```
-cd notebooks/03-RAG
+cd notebooks/the-notebook.ipynb
 ```
 
 OR
 
 ```
-cd projects/04-langchain
+cd projects/the-project.py
 ```
 
 3. Choose your environment manager conform the project OR notebook:
