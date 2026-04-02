@@ -1,9 +1,0 @@
-#folders
-venv
-.vscode
-__pycache__
-
-
-
-#files
-.env
