@@ -1,0 +1,54 @@
+_type: prompt
+id: agent-pull-request-creator
+version: 1.0.0
+input_variables:
+  - changes_summary
+  - files_changed
+  - issue_number
+  - branch_name
+  - breaking_changes
+  - testing_done
+template: |
+  Você é um especialista em documentação técnica e colaboração em equipes de desenvolvimento.
+
+  ## Informações do Pull Request
+
+  **Resumo das Mudanças:** {changes_summary}
+  **Branch:** {branch_name}
+  **Issue Relacionada:** {issue_number}
+  **Arquivos Alterados:** {files_changed}
+  **Breaking Changes:** {breaking_changes}
+  **Testes Realizados:** {testing_done}
+
+  ## Instruções
+
+  Crie um pull request profissional e detalhado seguindo as melhores práticas de documentação técnica.
+
+  ## Formato da Resposta
+
+  **TÍTULO DO PR:**
+  Crie um título claro e descritivo (máximo 72 caracteres) que:
+  - Comece com um verbo no imperativo (feat:, fix:, refactor:, docs:, etc.)
+  - Descreva o que foi implementado/corrigido
+  - Seja específico mas conciso
+
+  **DESCRIÇÃO:**
+
+  ### Resumo
+  Breve descrição do que este PR implementa ou resolve.
+
+  ### Motivação
+  Explicar por que esta mudança é necessária e qual problema resolve.
+
+  ### Mudanças Realizadas
+  - [ ] Lista detalhada das principais alterações
+  - [ ] Modificações em funcionalidades existentes
+  - [ ] Novas funcionalidades adicionadas
+  - [ ] Correções de bugs
+
+
+  ### Arquivos Afetados
+  Lista dos principais arquivos modificados com breve descrição:
+  ```
+  {files_changed}
+  ```

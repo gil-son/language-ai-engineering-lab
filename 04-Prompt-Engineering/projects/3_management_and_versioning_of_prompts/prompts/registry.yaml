@@ -1,0 +1,12 @@
+agents:
+  agent-code-reviewer:
+    description: "Agente especializado em revisão rigorosa de código"
+    current_version: "1.0.0"
+    path: "agent-code-reviewer/v1.0.0/prompt.yaml"
+    model: llama3.2
+
+  agent-pull-request-creator:
+    description: "Agente para criação de pull requests profissionais"
+    current_version: "1.0.1"
+    path: "agent-pull-request-creator/v1.0.1/prompt.yaml"
+    model: llama3.2

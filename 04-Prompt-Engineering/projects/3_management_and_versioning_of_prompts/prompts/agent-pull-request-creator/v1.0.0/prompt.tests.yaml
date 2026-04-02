@@ -1,0 +1,58 @@
+cases:
+  - name: feature_pr_complete
+    inputs:
+      changes_summary: "Implementação do sistema de autenticação OAuth2"
+      files_changed: "src/auth/oauth.py, tests/test_oauth.py, docs/auth.md"
+      issue_number: "123"
+      branch_name: "feature/oauth2-auth"
+      breaking_changes: "Sim - mudança na interface de autenticação"
+      testing_done: "Testes unitários e integração executados com sucesso"
+    expect_contains:
+      - "OAuth2"
+      - "**Breaking Changes:** Sim - mudança na interface de autenticação"
+      - "**Issue Relacionada:** 123"
+      - "**Branch:** feature/oauth2-auth"
+      - "src/auth/oauth.py, tests/test_oauth.py, docs/auth.md"
+      - "Testes unitários e integração executados com sucesso"
+
+  - name: bugfix_pr_minimal
+    inputs:
+      changes_summary: "Correção de bug na validação de email"
+      files_changed: "utils/validators.py"
+      branch_name: "fix/email-validation"
+      breaking_changes: "Não"
+    expect_contains:
+      - "Correção de bug na validação de email"
+      - "utils/validators.py"
+      - "**Branch:** fix/email-validation"
+      - "**Breaking Changes:** Não"
+      - "### Motivação"
+      - "### Mudanças Realizadas"
+
+  - name: refactor_pr
+    inputs:
+      changes_summary: "Refatoração do módulo de database para melhor performance"
+      files_changed: "database/connection.py, database/models.py, database/queries.py"
+      issue_number: "456"
+      branch_name: "refactor/database-optimization"
+      breaking_changes: "Não"
+      testing_done: "Benchmark executado - melhoria de 40% na performance"
+    expect_contains:
+      - "Refatoração do módulo de database para melhor performance"
+      - "database/connection.py, database/models.py, database/queries.py"
+      - "**Issue Relacionada:** 456"
+      - "**Branch:** refactor/database-optimization"
+      - "Benchmark executado - melhoria de 40% na performance"
+      - "**Breaking Changes:** Não"
+
+  - name: docs_pr_simple
+    inputs:
+      changes_summary: "Atualização da documentação da API"
+      files_changed: "docs/api.md, README.md"
+      breaking_changes: "Não"
+    expect_contains:
+      - "Atualização da documentação da API"
+      - "docs/api.md, README.md"
+      - "**Breaking Changes:** Não"
+      - "### Resumo"
+      - "### Arquivos Afetados"
