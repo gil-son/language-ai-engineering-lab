@@ -18,7 +18,7 @@ Enriches prompts through iterative retrieval-and-generation with `[MISSING: ...]
 ```mermaid
 flowchart TD
   A[Start: User Question] --> B[draft_chain: Generate answer with MISSING markers]
-  B --> C{Any [MISSING:] left?}
+  B --> C{Any 'MISSING:' left?}
   C -->|No| D[expansion_chain: Check for deeper gaps]
   D --> E{New markers?}
   E -->|No| F[Done]
@@ -26,7 +26,7 @@ flowchart TD
   C -->|Yes| G[query_chain: Generate text to fill gaps]
   G --> H[fill_chain: Rewrite answer replacing markers]
   H --> I{Progress made?}
-  I -->|No (3x)| F
+  I -->|No '3x'| F
   I -->|Yes| C
 ```
 
