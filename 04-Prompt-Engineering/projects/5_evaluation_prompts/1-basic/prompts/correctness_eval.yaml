@@ -1,0 +1,17 @@
+_type: prompt
+input_variables:
+  - code
+template: |
+  You are a code reviewer specialized in technical analysis.
+
+  Analyze the following code and identify issues:
+
+  {code}
+
+  Return ONLY JSON in format:
+  {{
+    "findings": [
+      {{"type":"", "line":0, "description":"", "severity":""}}
+    ],
+    "summary": ""
+  }}

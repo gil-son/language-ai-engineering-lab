@@ -1,0 +1,30 @@
+_type: prompt
+input_variables:
+  - language
+  - code
+input_types:
+  language: str
+  code: str
+template_format: f-string
+messages:
+  - role: system
+    content: |
+      You are an application security expert focused on identifying critical vulnerabilities in Go code.
+  - role: user
+    content: |
+      Analyze the following {language} code and identify ALL security vulnerabilities.
+
+      Code:
+      {code}
+
+      Focus on:
+      - SQL injection
+      - XSS (Cross-site scripting)
+      - Command injection
+      - Missing input validation
+      - Authentication/authorization issues
+      - Hardcoded credentials
+      - Session management issues
+
+      Return ONLY JSON in format:
+      {{"findings":[{{"type":"<type>","line":<num>,"description":"<desc>","severity":"<critical|high|medium|low>"}}],"summary":"<summary>"}}

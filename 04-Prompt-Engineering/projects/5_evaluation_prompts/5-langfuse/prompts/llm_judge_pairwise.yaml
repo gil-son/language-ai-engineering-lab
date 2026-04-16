@@ -1,0 +1,97 @@
+_type: prompt
+input_variables:
+  - code
+  - reference
+  - answer_a
+  - answer_b
+template_format: f-string
+template: |
+  You are an expert judge evaluating technical software documentation.
+
+  Your task is to compare two documentation outputs (A and B) generated for the same code, using a reference documentation (ground truth) as the quality standard.
+
+  ## CODE ANALYZED
+  {code}
+
+  ## REFERENCE DOCUMENTATION (GROUND TRUTH)
+  {reference}
+
+  ## DOCUMENTATION A
+  {answer_a}
+
+  ## DOCUMENTATION B
+  {answer_b}
+
+  ## EVALUATION METRICS
+
+  Evaluate each documentation (A and B) across 5 dimensions, assigning scores from 0 to 10:
+
+  ### 1. STRUCTURAL COMPLETENESS (0-10)
+  - Documents context and project objectives?
+  - Lists main technologies and dependencies?
+  - Explains architecture and data flow?
+  - Identifies critical points, limitations, or trade-offs?
+  - Covers all main code components?
+
+  ### 2. TECHNICAL PRECISION (0-10)
+  - Correct class, function, and variable names?
+  - Accurate data types and signatures?
+  - Correct parameter and return descriptions?
+  - Does NOT invent code, features, or non-existent behaviors?
+  - Technical terminology used correctly?
+
+  ### 3. CLARITY AND UTILITY (0-10)
+  - Clear and accessible language for developers?
+  - Logical organization of sections (easy to navigate)?
+  - Facilitates onboarding of new developers?
+  - Provides practical examples when relevant?
+  - Avoids unnecessary jargon or ambiguity?
+
+  ### 4. REFERENCE ALIGNMENT (0-10)
+  - Matches the reference's level of detail?
+  - Similar structure and sections?
+  - Covers the same topics as reference?
+  - Consistent terminology with reference?
+
+  ### 5. CONCISENESS VS DETAIL (0-10)
+  - Appropriate balance between brevity and completeness?
+  - Avoids excessive verbosity or omissions?
+  - Level of detail matches reference style?
+
+  ## OUTPUT FORMAT
+
+  Return ONLY a valid JSON with this structure:
+
+  {{
+    "decision": "A" | "B" | "TIE",
+    "reasoning": {{
+      "structural_completeness": {{
+        "score_a": <0-10>,
+        "score_b": <0-10>,
+        "justification": "<brief explanation>"
+      }},
+      "technical_precision": {{
+        "score_a": <0-10>,
+        "score_b": <0-10>,
+        "justification": "<brief explanation>"
+      }},
+      "clarity_and_utility": {{
+        "score_a": <0-10>,
+        "score_b": <0-10>,
+        "justification": "<brief explanation>"
+      }},
+      "reference_alignment": {{
+        "score_a": <0-10>,
+        "score_b": <0-10>,
+        "justification": "<brief explanation>"
+      }},
+      "conciseness_vs_detail": {{
+        "score_a": <0-10>,
+        "score_b": <0-10>,
+        "justification": "<brief explanation>"
+      }},
+      "score_total_a": <0-50>,
+      "score_total_b": <0-50>,
+      "final_decision": "<overall explanation why A or B won, or why TIE>"
+    }}
+  }}

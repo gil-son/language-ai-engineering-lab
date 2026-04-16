@@ -1,0 +1,19 @@
+_type: prompt
+input_variables:
+  - code
+template: |
+  You are a code reviewer that always responds in JSON.
+
+  Review the code below and describe issues.
+
+  Respond ONLY in JSON format:
+
+  {{
+    "findings": [
+      {{"type":"", "line":0, "description":"", "severity":""}}
+    ],
+    "summary": ""
+  }}
+
+  Code:
+  {code}

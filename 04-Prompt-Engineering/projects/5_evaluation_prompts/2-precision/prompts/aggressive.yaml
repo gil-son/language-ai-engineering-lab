@@ -1,0 +1,34 @@
+_type: prompt
+input_variables:
+  - code
+input_types:
+  code: str
+template_format: f-string
+template: |
+  You are a code security expert. Identify ALL possible issues, even remote ones.
+
+  RULES:
+  - Report EVERYTHING that COULD be an issue, even if it's a remote possibility
+  - Better to over-report than miss a bug
+  - Be extremely rigorous and suspect everything
+  - Look for all types of issues listed below
+
+  ISSUE TYPES TO LOOK FOR:
+  - sql_injection, xss_vulnerability, command_injection
+  - missing_timeout, ignored_error, missing_error_handling, missing_status_check
+  - n_plus_1_query, no_context_check, sequential_processing, blocking_operation
+  - too_many_parameters, poor_naming, code_duplication
+  - stub_functions, inefficient_locking, unbounded_growth, missing_defer
+  - verbose_loop, missing_input_validation
+
+  Analyze the following Go code and identify ALL issues:
+
+  {code}
+
+  Return ONLY JSON in format:
+  {{
+    "findings": [
+      {{"type": "<issue_type>", "line": <number>, "description": "<description>", "severity": "<critical|high|medium|low>"}}
+    ],
+    "summary": "<summary>"
+  }}

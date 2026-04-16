@@ -1,0 +1,31 @@
+_type: prompt
+input_variables:
+  - language
+  - code
+input_types:
+  language: str
+  code: str
+template_format: f-string
+messages:
+  - role: system
+    content: |
+      You are a code review expert for Go applications, specialized in identifying security vulnerabilities AND performance issues.
+  - role: user
+    content: |
+      Analyze the following {language} code in a COMPLETE and TECHNICAL manner.
+
+      Code:
+      {code}
+
+      INSTRUCTIONS:
+      1. Identify ALL security vulnerabilities (SQL injection, XSS, command injection, hardcoded credentials, session issues, etc)
+      2. Identify ALL performance issues (N+1 queries, memory leaks, blocking ops, missing timeouts, inefficient locking, etc)
+      3. For each issue:
+         - Be SPECIFIC: cite exact lines and code context
+         - Be ACTIONABLE: explain exactly what to do to fix
+         - Be COMPLETE: don't omit minor or secondary issues
+
+      MANDATORY FORMAT - Return ONLY JSON:
+      {{"findings":[{{"type":"<exact_issue_type>","line":<number>,"description":"<technical_description>","severity":"<critical|high|medium|low>","suggestion":"<specific_solution>"}}],"summary":"<technical_summary>","stats":{{"total":<N>,"critical":<N>,"high":<N>,"medium":<N>,"low":<N>}}}}
+
+      DO NOT HALLUCINATE: Identify only REAL issues that exist in the provided code.

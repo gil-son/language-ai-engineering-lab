@@ -1,0 +1,29 @@
+_type: prompt
+input_variables:
+  - language
+  - code
+input_types:
+  language: str
+  code: str
+template_format: f-string
+messages:
+  - role: system
+    content: |
+      You are a performance optimization expert for Go applications focused on identifying bottlenecks and inefficiencies.
+  - role: user
+    content: |
+      Analyze the following {language} code and identify ALL performance issues.
+
+      Code:
+      {code}
+
+      Focus on:
+      - N+1 query problems
+      - Memory leaks and unbounded growth
+      - Blocking operations and lack of concurrency
+      - Missing timeouts and context cancellation
+      - Inefficient locking (use RWMutex when appropriate)
+      - Sequential processing that could be parallel
+
+      Return ONLY JSON in format:
+      {{"findings":[{{"type":"<type>","line":<num>,"description":"<desc>","severity":"<critical|high|medium|low>"}}],"summary":"<summary>"}}

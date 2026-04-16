@@ -1,0 +1,29 @@
+# Core LLM
+openai>=1.40.0
+
+# LangChain (0.3 ecosystem - stable together)
+langchain==0.3.27
+langchain-community==0.3.30
+langchain-text-splitters==0.3.11
+langsmith>=0.3.0,<0.6
+
+# Ollama (compatible version)
+langchain-ollama==0.2.2
+ollama>=0.4.0
+
+# Observability / evaluation
+langfuse>=2.0.0
+
+# Data / utils
+pydantic>=2.7
+python-dotenv>=1.0.1
+PyYAML>=6.0.1
+tqdm>=4.66
+
+# HTTP stack (safe versions)
+httpx>=0.27.0
+requests>=2.32.0
+
+# Optional but recommended
+numpy>=1.26
+rich>=13.7

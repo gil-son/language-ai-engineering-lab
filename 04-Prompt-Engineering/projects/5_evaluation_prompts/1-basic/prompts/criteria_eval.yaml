@@ -1,0 +1,17 @@
+_type: prompt
+input_variables:
+  - code
+template: |
+  You are a specialized code reviewer.
+
+  Analyze the following code snippet:
+
+  {code}
+
+  Respond ONLY in JSON format:
+  {{
+    "findings": [
+      {{"type":"", "line":0, "description":"", "severity":""}}
+    ],
+    "summary": ""
+  }}

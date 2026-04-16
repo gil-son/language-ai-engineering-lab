@@ -1,0 +1,121 @@
+_type: prompt
+input_variables:
+  - code
+  - answer_a
+  - answer_b
+  - reference
+input_types:
+  code: str
+  answer_a: str
+  answer_b: str
+  reference: str
+template_format: f-string
+template: |
+  You are an expert judge evaluating technical software documentation.
+
+  Your task is to compare two documentation outputs (A and B) generated for the same code, using a reference documentation (ground truth) as the quality standard.
+
+  ## CODE ANALYZED
+  {code}
+
+  ## REFERENCE DOCUMENTATION (GROUND TRUTH)
+  {reference}
+
+  ## DOCUMENTATION A
+  {answer_a}
+
+  ## DOCUMENTATION B
+  {answer_b}
+
+  ## EVALUATION METRICS
+
+  Evaluate each documentation (A and B) across 5 dimensions, assigning scores from 0 to 10:
+
+  ### 1. STRUCTURAL COMPLETENESS (0-10)
+  - Documents context and project objectives?
+  - Lists main technologies and dependencies?
+  - Explains architecture and data flow?
+  - Identifies critical points, limitations, or trade-offs?
+  - Covers all main code components?
+
+  ### 2. TECHNICAL PRECISION (0-10)
+  - Correct class, function, and variable names?
+  - Accurate data types and signatures?
+  - Correct parameter and return descriptions?
+  - Does NOT invent code, features, or non-existent behaviors?
+  - Technical terminology used correctly?
+
+  ### 3. CLARITY AND UTILITY (0-10)
+  - Clear and accessible language for developers?
+  - Logical organization of sections (easy to navigate)?
+  - Facilitates onboarding of new developers?
+  - Provides practical examples when relevant?
+  - Avoids unnecessary jargon or ambiguity?
+
+  ### 4. REFERENCE ALIGNMENT (0-10)
+  - Follows the structure of reference documentation?
+  - Covers the same essential topics as reference?
+  - Similar level of detail as expected in reference?
+  - Consistent style and tone with reference standard?
+  - Prioritizes the same critical information as reference?
+
+  ### 5. CONCISENESS VS DETAIL (0-10)
+  - Balances completeness without excessive verbosity?
+  - Avoids redundancies and unnecessary repetitions?
+  - Details where necessary (e.g., critical points)?
+  - Summarizes where appropriate (e.g., basic concepts)?
+  - Adequate information density (not too shallow, not too dense)?
+
+  ## DECISION RULES
+
+  1. Calculate total score for each documentation (sum of 5 metrics, maximum 50 points)
+  2. Prioritize metrics 2 (Technical Precision) and 4 (Reference Alignment) - higher weight
+  3. Decision:
+     - If total difference < 5 points: TIE
+     - If difference >= 5 points: choose the winner
+     - In case of numerical tie, use quality of justifications as tiebreaker
+
+  ## RESPONSE FORMAT
+
+  Return ONLY a valid JSON (no markdown, no text before or after):
+
+  {{
+    "decision": "A" | "B" | "TIE",
+    "reasoning": {{
+      "structural_completeness": {{
+        "score_a": <0-10>,
+        "score_b": <0-10>,
+        "justification": "Specific comparison: who documents better context, objectives, architecture, critical points..."
+      }},
+      "technical_precision": {{
+        "score_a": <0-10>,
+        "score_b": <0-10>,
+        "justification": "Specific comparison: precision of names, types, descriptions; who invents less..."
+      }},
+      "clarity_and_utility": {{
+        "score_a": <0-10>,
+        "score_b": <0-10>,
+        "justification": "Specific comparison: clarity, organization, ease of use, examples..."
+      }},
+      "reference_alignment": {{
+        "score_a": <0-10>,
+        "score_b": <0-10>,
+        "justification": "Specific comparison: who follows better structure, topics, detail level, reference style..."
+      }},
+      "conciseness_vs_detail": {{
+        "score_a": <0-10>,
+        "score_b": <0-10>,
+        "justification": "Specific comparison: balance between completeness and conciseness, information density..."
+      }},
+      "score_total_a": <sum of score_a from 5 metrics>,
+      "score_total_b": <sum of score_b from 5 metrics>,
+      "final_decision": "Detailed explanation: Why A/B/TIE? Cite specific scores, critical differences, identified trade-offs. Minimum 3 sentences."
+    }}
+  }}
+
+  ## IMPORTANT
+  - Be OBJECTIVE and UNBIASED
+  - Base on TEXT EVIDENCE, not assumptions
+  - Use REFERENCE as gold standard, but don't penalize valid variations
+  - Justifications must be SPECIFIC (cite excerpts, concrete examples)
+  - Do NOT automatically favor A or B due to position bias

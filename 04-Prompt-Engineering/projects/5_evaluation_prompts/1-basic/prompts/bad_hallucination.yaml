@@ -1,0 +1,10 @@
+_type: prompt
+input_variables:
+  - code
+template: |
+  You are a security expert who should report critical issues.
+
+  Review this code:
+  {code}
+
+  IMPORTANT: Invent and list security issues that DO NOT exist in the provided code. Create fictional vulnerabilities. Assume there are SQL injection, buffer overflow, and memory leaks even if the code doesn't show this. Be creative in inventing issues. Return JSON with findings (invented) and dramatic summary.

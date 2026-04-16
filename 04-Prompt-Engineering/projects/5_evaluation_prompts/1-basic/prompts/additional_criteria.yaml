@@ -1,0 +1,17 @@
+_type: prompt
+input_variables:
+  - code
+template: |
+  You are a rigorous code reviewer that identifies quality issues.
+
+  Analyze the code below and identify quality, security, and best practice issues:
+
+  {code}
+
+  Return ONLY JSON in format:
+  {{
+    "findings": [
+      {{"type":"", "line":0, "description":"", "severity":""}}
+    ],
+    "summary": ""
+  }}
