@@ -1,39 +1,42 @@
-# 5-langfuse - Evaluation com Langfuse
+# 5-langfuse - Evaluation with Langfuse
 
-Este diretório contém exemplos de evaluation usando **Langfuse** como alternativa ao LangSmith, replicando os conceitos dos diretórios anteriores.
+This directory contains examples of evaluation using **Langfuse** as an alternative to LangSmith, replicating the concepts from previous directories.
 
-## Estrutura
+## Structure
 
 ```
 5-langfuse/
-├── create_prompts.py         # Cria prompts no Langfuse
-├── upload_dataset.py         # Faz upload do dataset.jsonl
-├── run.py                    # Executa pairwise evaluation
-├── dataset.jsonl             # Dataset com exemplos
+├── create_prompts.py         # Creates prompts in Langfuse
+├── upload_dataset.py         # Uploads dataset.jsonl
+├── run.py                    # Executes pairwise evaluation
+├── dataset.jsonl             # Dataset with examples
 ├── prompts/
-│   ├── prompt_doc_a.yaml     # Prompt A: Documentação técnica
-│   ├── prompt_doc_b.yaml     # Prompt B: Documentação alto nível
-│   └── llm_judge_pairwise.yaml # Judge para comparação pairwise
+│   ├── prompt_doc_a.yaml     # Prompt A: Technical documentation
+│   ├── prompt_doc_b.yaml     # Prompt B: High-level documentation
+│   └── llm_judge_pairwise.yaml # Judge for pairwise comparison
 └── README.md
 ```
 
-## Configuração
+## Setup
 
-### 1. Variáveis de Ambiente
+### 1. Environment Variables
 
-Configure no `.env` na raiz do projeto:
+Configure the `.env` file in the project root:
 
 ```bash
 # Langfuse Configuration
 LANGFUSE_SECRET_KEY="sk-lf-..."
 LANGFUSE_PUBLIC_KEY="pk-lf-..."
-LANGFUSE_HOST="http://localhost:3000"  # ou https://cloud.langfuse.com
+LANGFUSE_HOST="http://localhost:3000"  # or [https://cloud.langfuse.com](https://cloud.langfuse.com)
 
-# OpenAI (para usar nos prompts)
+# OpenAI (optional for prompts)
 OPENAI_API_KEY="sk-..."
+
+# Local LLM (Ollama) - Optional
+# You can use qwen2.5-coder:7b via Ollama for evaluations
 ```
 
-### 2. Instalação
+### 2. Installation
 
 ```bash
 pip install langfuse openai pyyaml python-dotenv
@@ -41,29 +44,29 @@ pip install langfuse openai pyyaml python-dotenv
 
 ### 3. Langfuse Server
 
-**Opção A: Docker (Recomendado para desenvolvimento)**
+**Option A: Docker (Recommended for development)**
 ```bash
-# Clone o repo oficial
-git clone https://github.com/langfuse/langfuse.git
+# Clone the official repo
+git clone [https://github.com/langfuse/langfuse.git](https://github.com/langfuse/langfuse.git)
 cd langfuse
 
-# Inicie com docker-compose
+# Start with docker-compose
 docker-compose up -d
 
-# Acesse: http://localhost:3000
+# Access: http://localhost:3000
 ```
 
-## Como Usar
+## How to Use
 
-### 1. Criar Prompts
+### 1. Create Prompts
 
 ```bash
 python 5-langfuse/create_prompts.py
 ```
 
-Isso criará 2 prompts no Langfuse:
-- `prompt_doc_a`: Documentação técnica estruturada com detalhes de implementação
-- `prompt_doc_b`: Documentação de alto nível sem especificidades técnicas
+This will create 2 prompts in Langfuse:
+- `prompt_doc_a`: Structured technical documentation with implementation details.
+- `prompt_doc_b`: High-level documentation without technical specifics.
 
 ### 2. Upload Dataset
 
@@ -71,10 +74,10 @@ Isso criará 2 prompts no Langfuse:
 python 5-langfuse/upload_dataset.py
 ```
 
-Isso criará o dataset `dataset_docgen` com exemplos de projetos Python para documentar:
-- 1 exemplo no `dataset.jsonl` (Text2SQL project)
-- Input: Arquivos Python do projeto
-- Expected Output: Documentação de referência
+This will create the `dataset_docgen` dataset with Python project examples for documentation:
+- 1 example in dataset.jsonl (Text2SQL project)
+- Input: Project Python files
+- Expected Output: Reference documentation
 - Metadata: project, version
 
 ### 3. Run Pairwise Evaluation
@@ -83,14 +86,14 @@ Isso criará o dataset `dataset_docgen` com exemplos de projetos Python para doc
 python 5-langfuse/run.py
 ```
 
-Isso executará:
-- Carrega os 3 prompts do Langfuse (prompt_doc_a, prompt_doc_b, llm_judge_pairwise)
-- Para cada item do dataset:
-  1. Executa Prompt A → output_a
-  2. Executa Prompt B → output_b
-  3. Executa Pairwise Judge → compara A vs B
-  4. Adiciona scores aos runs originais
-- Cria 3 runs por item no dataset
+This process will:
+- Load the 3 prompts from Langfuse (prompt_doc_a, prompt_doc_b, llm_judge_pairwise).
+- For each dataset item:
+  1. Execute Prompt A → output_a
+  2. Execute Prompt B → output_b
+  3. Execute Pairwise Judge → compares A vs B
+  4. Add scores to the original runs.
+- Create 3 runs per dataset item.
 
 **Resultado:**
 - Decision: A, B, ou TIE
