@@ -1,4 +1,4 @@
-# 01. Fundamentals
+# 03. Fundamentals
 
 <div align="center">
   <table>
@@ -13,7 +13,7 @@
 
 <br/>
 
-## 01.3. Environments Setup
+## 03.3. Environments Setup
 
 ### <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/7963/7963858.png" width="80"/> Introduction
 

@@ -1,4 +1,4 @@
-# 01. Fundamentals
+# 03. Fundamentals
 
 <div align="center">
   <table>
@@ -27,7 +27,7 @@
 </div>
 <br/>
 
-## 01.6. LLM Fine-tuning
+## 03.6. LLM Fine-tuning
 
 ### <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/7963/7963858.png" width="80"/> Introduction
 

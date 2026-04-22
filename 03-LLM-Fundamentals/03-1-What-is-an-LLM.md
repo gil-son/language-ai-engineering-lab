@@ -1,4 +1,4 @@
-# 01. Fundamentals
+# 03. Fundamentals
 
 
 <div align="center">
@@ -14,7 +14,7 @@
 </div>
 <br/>
 
-## 01.1. What is an LLM?
+## 03.1. What is an LLM?
 
 ### <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/7963/7963858.png" width="80"/> Introduction
 
