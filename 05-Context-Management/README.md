@@ -251,6 +251,8 @@ flowchart LR
     style LLM fill:#51cf66,color:#fff,stroke:none
 
 ```
+
+```
 User says: "My name is Ana and I prefer Python."
 → Buffer: { "user_name": "Ana", "preferred_language": "Python" }
 → Injected at each turn as: "Known facts: user_name=Ana, preferred_language=Python"
