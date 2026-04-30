@@ -77,12 +77,12 @@ Context Engineering sits at the intersection of six functional areas. **Design D
 graph TD
     CE(["🧠 Context Engineering"])
 
-    PE["📝 Prompt Engineering\nInstructions & reasoning guidance"]
-    RAG["🔍 RAG\nExternal knowledge grounding"]
-    MEM["💾 Memory\nLong-term user & session data"]
-    SH["🔄 State / History\nConversation thread management"]
-    SO["📤 Structured Outputs\nJSON, schemas, typed responses"]
-    DD["📐 Design Docs\nArchitectural decisions & trade-offs"]
+    PE["Prompt Engineering\nInstructions & reasoning guidance"]
+    RAG["RAG\nExternal knowledge grounding"]
+    MEM["Memory\nLong-term user & session data"]
+    SH["State / History\nConversation thread management"]
+    SO["Structured Outputs\nJSON, schemas, typed responses"]
+    DD["Design Docs\nArchitectural decisions & trade-offs"]
 
     CE <--> PE
     CE <--> RAG
@@ -189,48 +189,3 @@ Design Docs are the **architectural layer** of Context Engineering — the pract
 | **Evaluation difficulty** | Context quality is hard to measure automatically; human evaluation is expensive |
 | **Cost at scale** | More context = more tokens = higher inference cost; requires careful optimization |
 | **Complexity creep** | Multi-agent + memory + RAG systems are hard to debug and maintain |
-
----
-
-## <img src="https://cdn-icons-png.flaticon.com/512/18310/18310876.png" width="80"/> Learning Path
-
-A structured path to mastering Context Engineering, building from theory to production systems.
-
-### Foundation
-
-| Step | Topic | Focus |
-|------|-------|-------|
-| 1 | **Prompt Engineering** | Instructions, few-shot examples, chain-of-thought |
-| 2 | **Context Management** | Token budgets, truncation, summarization strategies |
-| 3 | **Embeddings & Semantic Search** | Vector representations, cosine similarity, ANN search |
-
-### Core Skills
-
-| Step | Topic | Focus |
-|------|-------|-------|
-| 4 | **RAG Pipelines** | Chunking, indexing, retrieval, reranking |
-| 5 | **Memory Systems** | Short-term vs long-term, storage backends, retrieval policies |
-| 6 | **Structured Outputs** | JSON mode, function calling, schema enforcement |
-| 7 | **Tool-Integrated Reasoning** | Tool definitions, routing, error handling |
-
-### Design & Architecture
-
-| Step | Topic | Focus |
-|------|-------|-------|
-| 8 | **Context Engineering Design Docs** | Documenting system decisions, trade-offs, and architecture |
-| 9 | **Multi-Agent Systems** | Agent roles, communication protocols, orchestration |
-| 10 | **Context Routing & Orchestration** | Dynamic context selection, pipeline design |
-
-### Advanced
-
-| Step | Topic | Focus |
-|------|-------|-------|
-| 11 | **Advanced RAG** | Hybrid search, GraphRAG, HyDE, multi-hop retrieval |
-| 12 | **Evaluation & Observability** | RAGAS, G-Eval, tracing, hallucination detection |
-| 13 | **Production & MLOps** | Latency, cost, reliability, monitoring at scale |
-
-### References
-
-- [Design Doc Examples](./Design-Doc-Examples/)
-- [From LLMs to Systems Design Docs](./From-LLMs-to-Systems-Design-Docs/)
-- [Context Management vs Context Engineering](./context-management-vs-engineering.md)
