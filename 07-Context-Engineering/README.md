@@ -157,7 +157,7 @@ Context Engineering is organized into four implementation pillars:
 
 ---
 
-### <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/2721/2721620.png" width="80"/> Design Docs
+### <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/8263/8263177.png" width="80"/> Design Docs
 
 Design Docs are the **architectural layer** of Context Engineering — the practice of capturing system decisions, information flows, and trade-offs in a written artifact before (and during) implementation.
 
@@ -189,3 +189,24 @@ Design Docs are the **architectural layer** of Context Engineering — the pract
 | **Evaluation difficulty** | Context quality is hard to measure automatically; human evaluation is expensive |
 | **Cost at scale** | More context = more tokens = higher inference cost; requires careful optimization |
 | **Complexity creep** | Multi-agent + memory + RAG systems are hard to debug and maintain |
+
+
+## <img src="https://cdn-icons-png.flaticon.com/512/18310/18310876.png" width="80"/> Context Engineering Structure
+
+```
+07-Context-Engineering/
+├── 01-Prompt-Engineering-Review.md
+├── 02-Context-Management-Review.md
+├── 03-Embeddings-and-Semantic-Search-Review.md
+├── 04-RAG-Pipelines-Review.md
+├── 05-Memory-Systems.md
+├── 06-Structured-Outputs.md
+├── 07-Tool-Integrated-Reasoning.md
+├── 08-Design-Docs/
+│   ├── Design-Doc-Examples.md
+│   └── From-LLMs-to-Systems-Design-Docs.md
+├── 09-Multi-Agent-Systems.md
+├── 10-Context-Routing-and-Orchestration.md
+├── 11-Evaluation-and-Observability.md
+└── 12-Production-and-MLOps.md
+```
