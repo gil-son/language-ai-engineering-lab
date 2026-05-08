@@ -45,13 +45,13 @@ This module makes context management **concrete** by walking through real, annot
 
 ---
 
-### 📋 Common Design Document Types
+### <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/11471/11471401.png" width="80"/>  Common Design Document Types
 
 Before diving into examples, it is essential to understand that "design document" is not a single artifact — it is a family of documents, each serving a distinct purpose in the engineering lifecycle. In LLM system development, you will encounter all five of these types.
 
 ---
 
-#### 📐 HLD — High Level Design
+#### <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/3344/3344877.png" width="80"/> HLD — High Level Design
 *"How does the system work, overall?"*
 
 The HLD describes the system at the architectural level. It answers: what are the main components, how do they connect, and what are the key data flows? For an LLM system, the HLD shows the relationship between the user interface, the orchestration layer, the retrieval system, the model inference endpoint, and the storage layer — without going into implementation details.
@@ -60,9 +60,21 @@ The HLD describes the system at the architectural level. It answers: what are th
 
 **Typical length:** 3–8 pages. Audience: engineers, product managers, architects.
 
+
+Referencies:
+
+- [How to create a good High Level Design — HLD](https://medium.com/@vedmkw/how-to-create-a-good-high-level-design-hld-fddba7f6ae18)
+- [MADR (Markdown ADR)](https://adr.github.io/madr/?utm_source=chatgpt.com)
+
+Templates:
+
+- [HLD template](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fwww.ucl.ac.uk%2Fisd%2Fsites%2Fisd%2Ffiles%2Fmigrated-files%2FHLD_template_v3.docx&wdOrigin=BROWSELINK)
+- [Prompt to Generate HLD](https://devfullcycle.notion.site/Prompt-para-gera-o-de-um-HLD-29e1423c0388802e98dec48b415a98f2)
+
+
 ---
 
-#### 🧩 Feature Design Doc
+#### <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/4067/4067507.png" width="80"/> Feature Design Doc
 *"How does this specific capability work?"*
 
 A Feature Design Doc zooms into one feature within the system — for example, "multi-session memory" or "dynamic prompt compression." It describes the user-facing behavior, the technical approach, the edge cases, and the acceptance criteria for that feature specifically.
@@ -73,7 +85,7 @@ A Feature Design Doc zooms into one feature within the system — for example, "
 
 ---
 
-#### 🔩 LLD — Low Level Design
+#### <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/3344/3344790.png" width="80"/>  LLD — Low Level Design
 *"How exactly will we build this?"*
 
 The LLD is the implementation blueprint. It includes class/function signatures, database schemas, API contracts, sequence diagrams, and pseudocode. For an LLM pipeline, this is where the context assembly function is fully specified: input types, token counting logic, priority queue for overflow, error return types, and unit test cases.
@@ -84,7 +96,7 @@ The LLD is the implementation blueprint. It includes class/function signatures, 
 
 ---
 
-#### 🏛️ ADR — Architecture Decision Record
+#### <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/5175/5175137.png" width="80"/> ADR — Architecture Decision Record
 *"Why did we make this architectural choice, and what did we reject?"*
 
 An ADR is a short, structured record of a single architectural decision. It captures the context (what problem we faced), the decision (what we chose), the alternatives considered, and the consequences (what we gain and what we trade off). ADRs are stored alongside code and updated when decisions change.
@@ -136,7 +148,7 @@ Templates:
 
 ---
 
-#### 💬 RFC — Request for Comments
+#### <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/6404/6404017.png" width="80"/>  RFC — Request for Comments
 *"Here is a proposal — please challenge it before we commit."*
 
 An RFC is a pre-decision document that proposes a significant change and explicitly solicits structured feedback. It is used when a decision is large enough to warrant broad input — for example, switching the context management strategy from sliding window to hierarchical memory, or adopting a new vector store. The RFC is circulated, commented on, revised, and eventually either accepted (becoming an ADR) or rejected (with the reasoning recorded).
