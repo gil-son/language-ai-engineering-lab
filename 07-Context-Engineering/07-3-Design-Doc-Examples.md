@@ -122,6 +122,18 @@ Consequences:
 
 **Typical length:** Half a page to 2 pages per decision. Audience: all engineers, archived for future reference.
 
+
+Referencies:
+
+- [ADR GitHub Organization](https://adr.github.io/?utm_source=chatgpt.com)
+- [MADR (Markdown ADR)](https://adr.github.io/madr/?utm_source=chatgpt.com)
+
+Templates:
+
+- [ADR Templates Catalog](https://adr.github.io/adr-templates/?utm_source=chatgpt.com)
+- [architecture_decision_record (kainepro)](https://github.com/kainepro/architecture_decision_record?utm_source=chatgpt.com)
+
+
 ---
 
 #### 💬 RFC — Request for Comments
@@ -141,6 +153,18 @@ An RFC is a pre-decision document that proposes a significant change and explici
 - Deadline for comments
 
 **Typical length:** 3–10 pages. Audience: senior engineers, tech leads, affected teams.
+
+
+Referencies:
+
+- [Texto do link](https://exemplo.com)
+- [Texto do link](https://exemplo.com)
+
+Templates:
+
+- [Rust RFCs](https://github.com/rust-lang/rfcs/blob/master/0000-template.md)
+- [React RFCs](https://github.com/reactjs/rfcs/blob/main/0000-template.md)
+
 
 ---
 
