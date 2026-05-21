@@ -314,6 +314,93 @@ def rag_retrieve_and_inject(query, vector_store, embedder, top_k=3):
 
 ---
 
+#### 6. Guardrails
+
+Guardrails are **validation and filtering mechanisms** applied at the boundaries of the context pipeline — before content enters the context window, during assembly, and after the model responds. While the other five techniques govern *how much* fits in the prompt, guardrails govern *what is safe and appropriate* to include or return at all.
+
+```mermaid
+flowchart TD
+    U["👤 User Input"] --> GI["🛡️ Input Guardrails\nPII detection\nPrompt injection check\nToken budget enforcement\nContent policy filter"]
+    GI -- blocked --> ERR["⛔ Rejected\nReturn error to user"]
+    GI -- allowed --> CA["⚙️ Context Assembly\nSliding window / RAG / summarization"]
+
+    CA --> GA["🛡️ Assembly Guardrails\nSlot isolation\nSource authorization check\nHistory sanitization\nSafety instruction pinning"]
+    GA --> LLM["🤖 LLM Call"]
+    LLM --> GO["🛡️ Output Guardrails\nHallucination / citation check\nFormat validation\nContent policy filter\nRefusal detection"]
+    GO -- blocked --> FALL["🔄 Fallback\nRetry / human escalation"]
+    GO -- passed --> RESP["✅ Response delivered to user"]
+
+    style GI fill:#e64980,color:#fff,stroke:none
+    style GA fill:#e64980,color:#fff,stroke:none
+    style GO fill:#e64980,color:#fff,stroke:none
+    style ERR fill:#ff6b6b,color:#fff,stroke:none
+    style FALL fill:#ffa94d,color:#fff,stroke:none
+    style LLM fill:#845ef7,color:#fff,stroke:none
+    style RESP fill:#51cf66,color:#fff,stroke:none
+```
+
+Guardrails operate in three stages:
+
+**Stage 1 — Input guardrails** (before context assembly)
+
+| Guardrail | What it does |
+|---|---|
+| PII detection | Detects and redacts personal data before it enters history or is sent to the model |
+| Prompt injection detection | Flags inputs attempting to override system instructions |
+| Token budget enforcement | Rejects or truncates inputs that exceed the per-slot maximum |
+| Content policy filter | Blocks inputs that violate acceptable use policies |
+
+**Stage 2 — Assembly guardrails** (during context construction)
+
+| Guardrail | What it does |
+|---|---|
+| Slot isolation | Prevents user-controlled content from bleeding into the system prompt slot |
+| Source authorization | Verifies retrieved chunks come from sources the user is allowed to access |
+| History sanitization | Redacts sensitive content from prior turns before they are re-injected |
+| Safety instruction pinning | Ensures safety-critical system prompt content survives overflow truncation |
+
+**Stage 3 — Output guardrails** (after model response)
+
+| Guardrail | What it does |
+|---|---|
+| Hallucination / citation check | Verifies that factual claims in the output are grounded in retrieved context |
+| Format validation | Rejects responses that do not conform to the expected schema; triggers a retry |
+| Content policy filter | Scans output for harmful, false, or policy-violating content before delivery |
+| Refusal detection | Catches unexpected model refusals and routes to a fallback or human escalation |
+
+**How it works step by step:**
+1. User input is passed through input guardrails before any context assembly begins.
+2. If blocked, an error is returned immediately — the model is never called.
+3. During context assembly, slot isolation and sanitization are applied to assembled content.
+4. The safety-critical portion of the system prompt is hard-pinned so overflow logic cannot evict it.
+5. After the model responds, output guardrails validate the response before it reaches the user.
+6. If output validation fails, a retry or fallback is triggered — not a silent delivery of bad output.
+
+```python
+def apply_input_guardrails(user_input, policy):
+    if policy.contains_pii(user_input):
+        user_input = policy.redact_pii(user_input)
+    if policy.is_injection_attempt(user_input):
+        raise GuardrailViolation("Prompt injection detected")
+    if policy.token_count(user_input) > policy.max_input_tokens:
+        raise GuardrailViolation("Input exceeds token budget")
+    return user_input
+
+def apply_output_guardrails(response, retrieved_chunks, policy):
+    if not policy.citations_grounded(response, retrieved_chunks):
+        raise GuardrailViolation("Ungrounded claims detected — triggering retry")
+    if not policy.valid_format(response):
+        raise GuardrailViolation("Output schema mismatch — triggering retry")
+    return response
+```
+
+> **Critical rule:** The system prompt slot — particularly any safety instructions — must be **hard-pinned** and exempt from all overflow truncation strategies. If something must be dropped to fit the budget, it should always be conversation history or retrieved context before it is ever a safety instruction.
+
+✅ Prevents harmful, non-compliant, or adversarial content from entering or leaving the pipeline  
+⚠️ Each guardrail layer adds latency; a full three-stage stack typically adds 50–150ms per request
+
+---
+
 ### <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/6404/6404564.png" width="80"/> Use Cases
 
 ---
@@ -326,6 +413,8 @@ def rag_retrieve_and_inject(query, vector_store, embedder, top_k=3):
 | Voice/IVR conversation | Aggressive truncation (low-latency budget) |
 | Personalized assistant | Long-term memory store |
 | Legal contract analysis | Chunked retrieval with overlap |
+| Public-facing or regulated system | Guardrails at all three stages |
+| Multi-tenant SaaS with per-user data | Assembly guardrails (source authorization + slot isolation) |
 
 ---
 
@@ -339,3 +428,5 @@ def rag_retrieve_and_inject(query, vector_store, embedder, top_k=3):
 - **Token counting overhead** — Accurate token budgeting requires calling a tokenizer on every message, adding latency.
 - **Window size is a moving target** — Model providers update context limits; hardcoded limits become stale.
 - **No gold standard** — There is no universal best strategy; the optimal approach depends on domain, latency budget, and model.
+- **Guardrail latency cost** — Each guardrail stage adds processing time. A full three-stage stack (input + assembly + output) typically adds 50–150ms; classifier-based guardrails may add more. Factor this into SLA design from the start, not as an afterthought.
+- **Guardrail false positives** — Overly aggressive input filters block legitimate requests. PII detectors misfire on fictional names; injection classifiers flag power-user prompts. Threshold tuning is an ongoing operational task, not a one-time setup.
