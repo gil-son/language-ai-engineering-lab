@@ -1,4 +1,4 @@
-# 02.1. NLP — Processing Language
+# 01.2.1 NLP — Processing Language
 
 <div align="center">
   <table>
@@ -11,7 +11,7 @@
   </table>
 </div>
 
-## 02.1.3. Tokenization
+## 01.2.1.3 Tokenization
 
 ### <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/7963/7963858.png" width="80"/> Introduction
 

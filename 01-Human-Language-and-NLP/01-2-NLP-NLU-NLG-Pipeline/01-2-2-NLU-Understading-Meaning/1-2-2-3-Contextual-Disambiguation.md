@@ -1,4 +1,4 @@
-# 02.2. NLU Understating Meaning
+# 01.2.2 NLU Understating Meaning
 
 <div align="center">
   <table>
@@ -11,7 +11,7 @@
   </table>
 </div>
 
-## 02.2.3. Contextual Disambiguation
+## 01.2.2.3 Contextual Disambiguation
 
 ### <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/7963/7963858.png" width="80"/> Introduction
 

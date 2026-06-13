@@ -1,4 +1,4 @@
-# 02.3.NLG. Generating Text
+# 01.2.3 NLG — Generating Text
 
 <div align="center">
   <table>
@@ -11,7 +11,7 @@
   </table>
 </div>
 
-## 02.3.3. Surface Realization
+## 01.2.3.3 Surface Realization
 
 ### <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/7963/7963858.png" width="80"/> Introduction
 

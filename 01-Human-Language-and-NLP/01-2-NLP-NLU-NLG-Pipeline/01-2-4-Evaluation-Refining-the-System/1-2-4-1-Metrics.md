@@ -1,4 +1,4 @@
-# 02.4. Evaluation-Refining-The-System
+# 01.2.4 Evaluation-Refining-The-System
 
 <div align="center">
   <table>
@@ -11,7 +11,7 @@
   </table>
 </div>
 
-## 02.4.1. Metrics
+## 01.2.4.1 Metrics
 
 ### <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/7963/7963858.png" width="80"/> Introduction
 
