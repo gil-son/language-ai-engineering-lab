@@ -315,24 +315,20 @@ Prompt injection, jailbreaks, and data exfiltration via the LLM are real attack 
 
 ---
 
-### <img src="https://cdn-icons-png.flaticon.com/512/2112/2112889.png" width="80"> Video
+### <img src="https://cdn-icons-png.flaticon.com/512/2112/2112889.png" width="80"> Videos
 
 A recommended video to visualize:
 
 <div align="center">
-  <a href="https://www.youtube.com/watch?v=zjkBMFhNj_g" target="_blank">
-      <img width="640" height="360" src="https://i.ytimg.com/vi/zjkBMFhNj_g/maxresdefault.jpg"/>
+  <a href="https://www.youtube.com/watch?v=fFgyOucIFuk" target="_blank">
+      <img width="640" height="360" src="https://i.ytimg.com/vi/fFgyOucIFuk/hqdefault.jpg?sqp=-oaymwEnCOADEI4CSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBHeCpHvfGkZzjwULYaxOiQYwk4gg"/>
   </a>
 </div>
-
-> **Andrej Karpathy — Intro to Large Language Models** *(Covers the full arc from LLM internals to system-level thinking — ideal companion to this module)*
 
 ---
 
 <div align="center">
-
-| ← Previous | Module | Next → |
-|:---:|:---:|:---:|
-| [03-9 LLM Evaluation](./03-9-LLM-Evaluation.md) | **03. LLM Fundamentals** | [04 Prompt Engineering →](../04-Prompt-Engineering/) |
-
+  <a href="https://www.youtube.com/watch?v=_pEEJu-2KKM" target="_blank">
+      <img width="640" height="360" src="https://i.ytimg.com/vi/_pEEJu-2KKM/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCReKeM7dXvVhKYV6ZKdGVRWYTwHw"/>
+  </a>
 </div>

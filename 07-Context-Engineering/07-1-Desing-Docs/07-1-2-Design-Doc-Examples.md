@@ -679,24 +679,20 @@ Example 4's parallel architecture assumes your API tier supports 10+ concurrent 
 
 ---
 
-### <img src="https://cdn-icons-png.flaticon.com/512/2112/2112889.png" width="80"> Video
+### <img src="https://cdn-icons-png.flaticon.com/512/2112/2112889.png" width="80"> Videos
 
 A recommended video to visualize:
 
 <div align="center">
-  <a href="https://www.youtube.com/watch?v=KNH7hKB1rpA" target="_blank">
-      <img width="640" height="360" src="https://i.ytimg.com/vi/KNH7hKB1rpA/maxresdefault.jpg"/>
+  <a href="https://www.youtube.com/watch?v=fFgyOucIFuk" target="_blank">
+      <img width="640" height="360" src="https://i.ytimg.com/vi/fFgyOucIFuk/hqdefault.jpg?sqp=-oaymwEnCOADEI4CSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBHeCpHvfGkZzjwULYaxOiQYwk4gg"/>
   </a>
 </div>
-
-> **LangChain — Managing Memory in LLM Applications** *(Deep dive into history management, summarization strategies, and practical context window patterns — perfect complement to the examples in this module)*
 
 ---
 
 <div align="center">
-
-| ← Previous | Module | Next → |
-|:---:|:---:|:---:|
-| [05-4 Context Compression](./05-4-Context-Compression.md) | **05. Context Management** | [06 RAG Pipeline →](../06-RAG-Pipeline/) |
-
+  <a href="https://www.youtube.com/watch?v=_pEEJu-2KKM" target="_blank">
+      <img width="640" height="360" src="https://i.ytimg.com/vi/_pEEJu-2KKM/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCReKeM7dXvVhKYV6ZKdGVRWYTwHw"/>
+  </a>
 </div>
