@@ -27,7 +27,7 @@
 </div>
 <br/>
 
-## 07.02. From LLMs to Systems — Design Documents
+## 07.1.1 From LLMs to Systems — Design Documents
 
 ---
 
