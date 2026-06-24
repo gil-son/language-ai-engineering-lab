@@ -56,28 +56,31 @@ Designing context as a system: instruction hierarchies, memory fusion, grounding
 ### 08-Evaluation-and-Benchmarks
 Metrics, prompt testing, regression testing, hallucination measurement, latency, cost tracking, and tracing.
 
-### 09-Hallucinations-and-Factuality
+### 09-Harness-Engineering
+LLM test harness design: scaffolding, input/output capture, retry logic, mocking, CI/CD integration, and automated evaluation pipelines.
+
+### 10-Hallucinations-and-Factuality
 Failure modes, hallucination taxonomy, detection strategies, grounding techniques, and mitigation patterns.
 
-### 10-Model-Context-Protocol
+### 11-Model-Context-Protocol
 Standardized tool and data access via MCP, custom servers, and secure integrations.
 
-### 11-LLM-Orchestration
+### 12-LLM-Orchestration
 Workflow orchestration with LangChain, LangGraph, Semantic Kernel, LangFlow, LangSmith, and LangFuse.
 
-### 12-Agentic-AI-Systems
+### 13-Agentic-AI-Systems
 Autonomous agents, planning, reasoning loops, tool use, and multi-agent collaboration.
 
-### 13-Multimodal-Models
+### 14-Multimodal-Models
 Vision-language models, audio-text models, multimodal fusion, and cross-modal reasoning.
 
-### 14-MLOps-and-Production
+### 15-MLOps-and-Production
 CI/CD, deployment, monitoring, observability, scaling, and cost optimization.
 
-### 15-LLM-Data-Engineering
+### 16-LLM-Data-Engineering
 Dataset lifecycle, cleaning, versioning, labeling, and synthetic data generation.
 
-### 16-AI-IVR-Specifics
+### 17-AI-IVR-Specifics
 Speech-to-text, text-to-speech, dialogue management, and real-time IVR orchestration.
 
 ### **Projects**
@@ -142,6 +145,12 @@ By the End of This Lab, You Will Be Able To:
 - **Detect and categorize** hallucinations (factual, contextual, structural)
 - **Implement** grounding, verification, and evidence-first strategies
 - **Track** latency, cost, and quality regressions over time
+
+### Harness Engineering
+- **Design** test harnesses to systematically run and capture LLM inputs and outputs
+- **Build** retry logic, mocking layers, and prompt regression pipelines
+- **Integrate** LLM evaluation scaffolding into CI/CD workflows
+- **Automate** quality gates and behavioral checks across model versions
 
 ### Model Context Protocol (MCP)
 - **Understand** MCP as a standard interface between LLMs, tools, and data sources
@@ -212,21 +221,23 @@ START
  ↓
 08-Evaluation-and-Benchmarks
  ↓
-09-Hallucinations-and-Factuality
+09-Harness-Engineering
  ↓
-10-Model-Context-Protocol
+10-Hallucinations-and-Factuality
  ↓
-11-LLM-Orchestration
+11-Model-Context-Protocol
  ↓
-12-Agentic-AI-Systems
+12-LLM-Orchestration
  ↓
-13-Multimodal-Models
+13-Agentic-AI-Systems
  ↓
-14-MLOps-and-Production
+14-Multimodal-Models
  ↓
-15-LLM-Data-Engineering
+15-MLOps-and-Production
  ↓
-16-AI-IVR-Specifics
+16-LLM-Data-Engineering
+ ↓
+17-AI-IVR-Specifics
 ```
 
 ---
@@ -246,14 +257,15 @@ language-ai-engineering-lab/
 ├── 06-RAG-Pipeline/
 ├── 07-Context-Engineering/
 ├── 08-Evaluation-and-Benchmarks/
-├── 09-Hallucinations-and-Factuality/
-├── 10-Model-Context-Protocol/
-├── 11-LLM-Orchestration/
-├── 12-Agentic-AI-Systems/
-├── 13-Multimodal-Models/
-├── 14-MLOps-and-Production/
-├── 15-LLM-Data-Engineering/
-├── 16-AI-IVR-Specifics/
+├── 09-Harness-Engineering/
+├── 10-Hallucinations-and-Factuality/
+├── 11-Model-Context-Protocol/
+├── 12-LLM-Orchestration/
+├── 13-Agentic-AI-Systems/
+├── 14-Multimodal-Models/
+├── 15-MLOps-and-Production/
+├── 16-LLM-Data-Engineering/
+├── 17-AI-IVR-Specifics/
 ├── projects/
 ├── notebooks/
 └── scripts/

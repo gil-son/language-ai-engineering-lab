@@ -128,3 +128,97 @@ When configuring your project, import the required libraries and specify the mod
 ```python
 model_name = "llama3.2"
 ```
+
+
+
+## Learning Path
+
+
+### Fundamentals
+- Initialize a Chat Model
+- Prompt Templates
+
+---
+
+### Chains and Processing
+
+#### Starting with Chains
+Chains allow you to connect prompts, models, and outputs into a single execution flow.
+
+#### Chains with Decorators
+Decorators help simplify chain definitions and improve readability.
+
+#### RunnableLambda
+`RunnableLambda` lets you inject custom Python logic into a LangChain pipeline.
+
+#### Processing Pipelines
+Pipelines combine multiple runnables into structured workflows.
+
+---
+
+### Summarization
+
+LLMs are **stateless**. As conversations or documents grow, they may exceed the model’s **context window**, causing earlier information to be lost.
+
+For this reason, **summarization is crucial**.
+
+#### Why Summarization?
+- Reduces token usage and cost
+- Preserves essential information
+- Enables long-document processing
+
+#### Chunking
+
+Large texts are split into smaller pieces (chunks):
+
+**Original text**
+```
+I was at the supermarket and a salesman offered chocolate. But I don't like pure chocolate.
+```
+
+**Chunks**
+```
+Chunk 1: I was at the supermarket and a salesman offered chocolate. But I don't
+Chunk 2: like pure chocolate.
+```
+
+If we process only Chunk 2, important context is lost.
+
+#### Chunk Overlap
+
+Chunk overlap helps recover context by reusing part of the previous chunk.
+
+Example (overlap = 10 characters):
+```
+Previous overlap + Chunk 2 → I don't like pure chocolate.
+```
+
+---
+
+### Summarization Strategies
+
+#### STUFF
+- Combines all chunks and summarizes them at once.
+
+**Pros**
+- Simple
+- Fast
+
+**Cons**
+- Limited by context window
+
+#### MAP-REDUCE
+- Summarizes each chunk individually (Map)
+- Combines summaries into a final summary (Reduce)
+
+**Pros**
+- Scales to large documents
+
+**Cons**
+- More complex
+- Slightly higher cost
+
+---
+
+### Pipeline Summarization
+You can build a **custom summarization pipeline** using chains and runnables tailored to your data and constraints.
