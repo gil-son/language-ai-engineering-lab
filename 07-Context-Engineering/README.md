@@ -195,18 +195,18 @@ Design Docs are the **architectural layer** of Context Engineering — the pract
 
 ```
 07-Context-Engineering/
-├── 01-Prompt-Engineering-Review.md
-├── 02-Context-Management-Review.md
-├── 03-Embeddings-and-Semantic-Search-Review.md
-├── 04-RAG-Pipelines-Review.md
-├── 05-Memory-Systems.md
-├── 06-Structured-Outputs.md
-├── 07-Tool-Integrated-Reasoning.md
-├── 08-Design-Docs/
-│   ├── Design-Doc-Examples.md
-│   └── From-LLMs-to-Systems-Design-Docs.md
-├── 09-Multi-Agent-Systems.md
-├── 10-Context-Routing-and-Orchestration.md
-├── 11-Evaluation-and-Observability.md
-└── 12-Production-and-MLOps.md
+├── 07-1-Prompt-Engineering-Review.md
+├── 07-2-Context-Management-Review.md
+├── 07-3-Embeddings-and-Semantic-Search-Review.md
+├── 07-4-RAG-Pipelines-Review.md
+├── 07-5-Memory-Systems.md
+├── 07-6-Structured-Outputs.md
+├── 07-7-Tool-Integrated-Reasoning.md
+├── 07-8-Design-Docs/
+│   ├── 07-8-1-From-LLMs-to-Systems-Design-Docs.md
+│   └── 07-8-2-Design-Doc-Examples.md
+├── 07-9-Multi-Agent-Systems.md
+├── 07-10-Context-Routing-and-Orchestration.md
+├── 07-11-Evaluation-and-Observability.md
+└── 07-12-Production-and-MLOps.md
 ```
