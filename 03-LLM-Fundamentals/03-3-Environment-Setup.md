@@ -13,7 +13,7 @@
 
 <br/>
 
-## 03.3. Environments Setup
+## 03.3. Environment Setup
 
 ### <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/7963/7963858.png" width="80"/> Introduction
 
@@ -68,8 +68,8 @@ Step-by-step Process
 
 1. Clone the repository:
 ```
-git clone https://github.com/gil-son/llm-engineering-lab.git
-cd llm-engineering-lab
+git clone https://github.com/gil-son/language-ai-engineering-lab.git
+cd language-ai-engineering-lab
 ```
 2. Access the desired notebook or project:
 ```

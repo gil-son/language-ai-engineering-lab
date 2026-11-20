@@ -66,7 +66,7 @@ Frontier LLMs represent the most advanced language models available — either c
    - **GPT (OpenAI)** – Industry leader in general-purpose reasoning, coding, and conversation. Known for ChatGPT.  
    - **Claude (Anthropic)** – Emphasizes safety and constitutional AI. Strong at long-context understanding.  
    - **Gemini (Google DeepMind)** – Integrates with Google’s ecosystem; strong at multimodal reasoning (text, images, code).  
-   - **Command R (Cohere)** – Optimized for retrieval-augmented generation [(RAG)](https://github.com/gil-son/llm-engineering-lab/tree/main/03-RAG-Pipeline) and enterprise workflows.  
+   - **Command R (Cohere)** – Optimized for retrieval-augmented generation [(RAG)](https://github.com/gil-son/language-ai-engineering-lab/tree/main/06-RAG-Pipeline) and enterprise workflows.  
    - **Perplexity** – Hybrid model + search engine; optimized for real-time question answering with citations.  
 
 - **Open-Source**
