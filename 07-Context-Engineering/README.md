@@ -202,5 +202,5 @@ Design Docs are the **architectural layer** of Context Engineering — the pract
 ├── 07-3-RAG-Pipelines-Review.md
 ├── 07-4-Memory-Systems.md
 ├── 07-5-State-History.md
-└── 07-6-Structured Outputs.md
+└── 07-6-Structured-Outputs.md
 ```
