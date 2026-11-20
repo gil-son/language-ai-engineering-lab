@@ -1,4 +1,4 @@
-## 01. Human-Language-and-NLP
+# 01. Human Language and NLP
 
 <div align="center">
   <table>
@@ -9,8 +9,23 @@
     </tr>
   </table>
 </div>
+<br/>
 
-## 01.1. What is Human Language?
+## <img src="https://cdn-icons-png.flaticon.com/512/8592/8592294.png" width="10%"/> Overview
+
+This section establishes the **foundations of human language and Natural Language Processing (NLP)** — how people communicate with language, and how machines can be designed to **process, understand, and generate** it. It is the conceptual base for everything that follows: transformers, LLMs, prompting, and RAG.
+
+> **"How do humans communicate with language, and how can machines understand and generate it?"**
+
+The field is usually split into three complementary stages, which this section follows:
+
+| Stage | Focus | Key question | Examples |
+|-------|-------|--------------|----------|
+| **NLP** | Processing language | How is text structured? | Tokenization, embeddings |
+| **NLU** | Understanding meaning | What does it mean? | Intent, entities, semantics |
+| **NLG** | Generating text | What should I say? | Content & sentence planning |
+
+---
 
 ### <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/7963/7963858.png" width="80"/> Introduction
 
@@ -123,3 +138,25 @@ A few recommended resources to visualize:
       <img width="640" height="360" src="https://i.ytimg.com/vi/fLvJ8VdHLA0/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCjq8wRRS16ldH-MyWo-oAgb3SjzQ"/>
   </a>
 </div>
+
+---
+
+## <img src="https://cdn-icons-png.flaticon.com/512/18310/18310876.png" width="80"/> Section Structure
+
+```
+01-Human-Language-and-NLP/
+├── README.md                              # This overview
+└── 01-2-NLP-NLU-NLG-Pipeline/
+    ├── 01-2-1-NLP-Processing-Language/     # Preprocessing, splitting, tokenization, embeddings, ingestion
+    ├── 01-2-2-NLU-Understading-Meaning/    # Intent & entities, semantics, disambiguation, retrieval
+    ├── 01-2-3-NLG-Generating-Text/         # Content & sentence planning, realization, post-processing
+    └── 01-2-4-Evaluation-Refining-the-System/  # Metrics and feedback / RL
+```
+
+---
+
+### <img src="https://cdn-icons-png.flaticon.com/512/2581/2581996.png" width="80"> Related
+
+- **[02-Transformer-Architecture](https://github.com/gil-son/language-ai-engineering-lab/tree/main/02-Transformer-Architecture)** — the architecture that modern NLP is built on
+- **[03-LLM-Fundamentals](https://github.com/gil-son/language-ai-engineering-lab/tree/main/03-LLM-Fundamentals)** — large language models as the next step
+- **[06-RAG-Pipeline](https://github.com/gil-son/language-ai-engineering-lab/tree/main/06-RAG-Pipeline)** — retrieval built on these NLP foundations
