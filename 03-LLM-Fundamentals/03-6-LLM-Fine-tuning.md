@@ -113,7 +113,9 @@ graph TD
 
 ### <img src="https://cdn-icons-png.flaticon.com/512/2147/2147809.png" width="80"> Code/Notebook/Projects
 
-[In the soon]
+- [Hugging Face PEFT — Parameter-Efficient Fine-Tuning](https://huggingface.co/docs/peft/index)
+- [LoRA: Low-Rank Adaptation of Large Language Models (paper)](https://arxiv.org/abs/2106.09685)
+- [QLoRA: Efficient Finetuning of Quantized LLMs (paper)](https://arxiv.org/abs/2305.14314)
 
 ---
 
@@ -121,4 +123,4 @@ graph TD
 
 A few recommended resources to visualize:
 
-[In the soon]
+- [Hugging Face — How to fine-tune an LLM (course)](https://huggingface.co/learn/nlp-course/chapter3/1)
