@@ -1,10 +1,34 @@
-# 04.1 Prompt Engineering
-<div align="center"> <table> <tr> <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/2581/2581957.png" width="80"/></td> <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/5358/5358533.png" width="80"/></td> </tr> </table> </div>
+# 04. Prompt Engineering
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/2581/2581957.png" width="80"/></td>
+      <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/5358/5358533.png" width="80"/></td>
+    </tr>
+  </table>
+</div>
+<br/>
+
+## <img src="https://cdn-icons-png.flaticon.com/512/8592/8592294.png" width="10%"/> Overview
+
+Prompt Engineering is the practice of designing, structuring, and optimizing prompts to guide Large Language Models (LLMs) toward accurate, relevant, and reliable outputs — **at inference time**, without changing the model's weights.
+
+> **"How do I steer a trained model to the output I want — without retraining it?"**
+
+Rather than relying on fine-tuning, prompt engineering uses instruction design, examples, and reasoning strategies to control behavior. In production systems, a well-designed prompt is often as important as the model choice.
+
+| Aspect | Prompt Engineering | Fine-tuning |
+|--------|--------------------|-------------|
+| When applied | At inference time | During training |
+| Cost | Low (no training) | High (compute + data) |
+| Iteration speed | Immediate | Slow |
+| Changes model weights | No | Yes |
+| Best for | Steering behavior, format, reasoning | Deep domain adaptation |
 
 ---
 
-## 04 Prompt Engineering
-<img src="https://cdn-icons-png.flaticon.com/512/7963/7963858.png" width="60"/> Introduction
+### <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/7963/7963858.png" width="80"/> Introduction
 
 Prompt Engineering is the practice of designing, structuring, and optimizing prompts to guide Large Language Models (LLMs) toward producing accurate, relevant, and reliable outputs.
 
@@ -12,22 +36,22 @@ Rather than relying solely on model fine-tuning, prompt engineering leverages in
 
 ---
 
-## <img src="https://cdn-icons-png.flaticon.com/512/5557/5557844.png" width="60"/> Why use it?
+### <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/5557/5557844.png" width="80"/> Why use it?
 
 Prompt Engineering is essential because it allows you to:
 
-- Improve response accuracy and consistency: add example
-- Reduce hallucinations and ambiguous outputs: add example
-- Guide reasoning and decision-making steps: add example
-- Adapt general-purpose models to specific tasks: add example
-- Save costs by avoiding unnecessary fine-tuning: add example
-- Enable safer and more controllable AI systems: add example
+- Improve response accuracy and consistency
+- Reduce hallucinations and ambiguous outputs
+- Guide reasoning and decision-making steps
+- Adapt general-purpose models to specific tasks
+- Save costs by avoiding unnecessary fine-tuning
+- Enable safer and more controllable AI systems
 
 In production systems, well-designed prompts are often as important as model selection.
 
 ---
 
-## <img src="https://cdn-icons-png.flaticon.com/512/7527/7527144.png" width="60"/> How does it work?
+### <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/7527/7527144.png" width="80"/> How does it work?
 
 LLMs generate responses based on patterns learned during training. Prompts act as **contextual constraints**, influencing:
 
@@ -482,7 +506,7 @@ Before running a prompt, review whether it:
 
 ---
 
-## <img src="https://cdn-icons-png.flaticon.com/512/6404/6404564.png" width="60"/> Use Cases
+### <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/6404/6404564.png" width="80"/> Use Cases
 
 - Chatbots and virtual assistants: Designing a prompt that makes a customer-support bot greet users, ask clarifying questions, and provide step-by-step troubleshooting for common issues (e.g., “Reset your password” or “Track my order”), while maintaining a consistent brand tone.
 - RAG (Retrieval-Augmented Generation): Creating a prompt that instructs an AI to answer questions using only retrieved company policy documents, and to respond with “I don’t have that information” if the answer is not found in the provided context.
@@ -518,3 +542,11 @@ A few recommended resources to visualize:
       <img width="640" height="360" src="https://i.ytimg.com/vi/1c9iyoVIwDs/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDX-KjQUVawkSqObSHDBOgrihqKDw"/>
   </a>
 </div>
+
+---
+
+### <img src="https://cdn-icons-png.flaticon.com/512/2581/2581996.png" width="80"> Related
+
+- **[03-LLM-Fundamentals](https://github.com/gil-son/language-ai-engineering-lab/tree/main/03-LLM-Fundamentals)** — the models these prompts steer
+- **[05-Context-Management](https://github.com/gil-son/language-ai-engineering-lab/tree/main/05-Context-Management)** — managing what fits around the prompt
+- **[07-Context-Engineering](https://github.com/gil-son/language-ai-engineering-lab/tree/main/07-Context-Engineering)** — the prompt as one part of a full context system
