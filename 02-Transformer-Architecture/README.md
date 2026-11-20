@@ -1,5 +1,18 @@
 # 02. Transformer Architecture
 
+<div align="center">
+  <table>
+    <tr>
+      <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/9722/9722973.png" width="80"/></td>
+      <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/11149/11149936.png" width="80"/></td>
+      <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/2351/2351559.png" width="80"/></td>
+      <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/2582/2582078.png" width="80"/></td>
+      <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/6062/6062146.png" width="80"/></td>
+      <td align="center"><img src="https://cdn-icons-png.flaticon.com/512/10817/10817413.png" width="80"/></td>
+    </tr>
+  </table>
+</div>
+
 ## <img src="https://cdn-icons-png.flaticon.com/512/8592/8592294.png" width="10%"/> Overview
 
 The **Transformer** is the architecture that powers virtually every modern Large Language Model. Introduced in 2017 in the paper *"Attention Is All You Need"*, it replaced the slow, word-by-word processing of earlier models with a design that reads an entire sequence **at once** and learns how every token relates to every other token through a mechanism called **attention**.
